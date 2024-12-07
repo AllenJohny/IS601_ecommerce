@@ -1,24 +1,20 @@
-<link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" style="font-family: 'Abril Fatface';" href="#">WATT-A-Deal!</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/products">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li>
-          <form class="form-inline my-2 my-lg-0" method="POST" action="/products/search">
-            {% csrf_token %}
-            <input class="form-control mr-sm-2" name="key" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </li>
-        <li>
-          <a class="btn btn-primary" href="/cart" style="float:right; margin-right:20px">Cart {{ item_count }}</a>
-        </li>
-    </div>
-  </nav>
+{% load static %}
+<header>
+  <div class="nav-container">
+    <a href="#"><img src="{% static 'css-imgs/logo.png' %}" class="logo-img"></a>
+
+    <nav>
+      <ul>
+        <li id="search-bar"><form class="form-inline my-2 my-lg-0" method="POST" action="/products/search">
+          {% csrf_token %}
+          <input class="form-control-lg" name="key" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark btn-lg" type="submit">Search</button>
+        </form></li>
+        <li><a class="nav-link" href="/products"><h6>Home</h6><span class="sr-only">(current)</span></a></li>
+        <li><a href="#">LOGOUT</a></li>
+        <li><a class="btn btn-outline-secondary" href="/cart"><img src="{% static 'css-imgs/cart_icon.png' %}" class="cart-icon">{{ item_count }}</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>

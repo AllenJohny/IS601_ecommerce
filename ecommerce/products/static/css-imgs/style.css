@@ -1,0 +1,104 @@
+
+body{
+    background-image: url(base_bg.jpg);
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+
+.nav-container {
+    background-color: whitesmoke;
+	width: 90%;
+    height: auto;
+    padding-right: 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: solid 3px black
+}
+
+header {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#logo-a{
+    margin:0;
+}
+
+.logo-img {
+    
+    margin-left: 2%;
+    height: 90px;
+    width: 210px;
+
+}
+
+.cart-icon{
+    height:50px;
+    width: 50px;
+}
+
+nav {
+  float: right;
+
+}
+
+nav ul {
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 23px;
+  position: relative;
+}
+
+.form-control-lg{
+    margin-right: 50px;
+}
+
+#search-bar{
+    margin-right: 250px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+  
+
